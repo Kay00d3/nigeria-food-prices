@@ -1,0 +1,11 @@
+Data Cleaning and Preprocessing
+
+The raw food price dataset was obtained from the World Food Programme (WFP) and loaded into Python using the Pandas library. The dataset was cleaned and prepared to make it suitable for analysis. First, the date column was converted into a datetime format, and a new column containing the month and year was created to make monthly analysis easier.
+
+The dataset was filtered to include only retail prices recorded in Nigerian Naira (NGN) from April 2022 onwards. To ensure consistency, the different measurement units were converted into kilograms. Prices recorded in grams were converted to kilograms, while prices already recorded in kilograms were retained. Records with unsupported units or invalid weight values were removed. The price per kilogram was then calculated by dividing the original price by the corresponding weight.
+
+The study focused on six markets located in Borno and Yobe States: Monday, Abba Gamaram, Budum, Gujba (Buni Yadi), Potiskum, and Bade (Gashua). Six food commodities were selected: local rice, millet, sorghum, yam, white beans, and maize flour. The state and geographical zone of each market were also added to the dataset.
+
+Missing monthly observations were checked for each market and commodity. The average price was calculated for every month, and missing values within the available data range were estimated using linear interpolation. A maximum of two consecutive missing months were filled, while remaining missing prices were removed.
+
+Finally, the dataset was arranged into six columns: month, zone, state, market, commodity, and price per kilogram. The cleaned dataset was saved as "food_clean.csv" in the processed data folder for further analysis and visualization.

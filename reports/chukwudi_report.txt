@@ -1,0 +1,86 @@
+Food Price Movements in Borno and Yobe Around the 2023 Fuel Subsidy Removal and Naira Float
+Prepared by Chukwudi Nwanokwai
+1. Introduction
+In May 2023 Nigeria removed its fuel subsidy, and in June 2023 the naira was floated. Both events raised transport and import costs, and both were widely expected to push up the price of food. This report describes how the prices of six staple commodities in Borno and Yobe states changed around these two events. It is a descriptive analysis: it shows what happened to prices, and does not claim to prove that either policy caused the changes.
+2. Data and Method
+The data are monthly average prices in naira per kilogram for six commodities (white beans, maize flour, millet, local rice, sorghum and yam) in two states, Borno and Yobe. The series runs from roughly early 2022 to late 2026. 
+For each event, I compared the average price in the months before the event with the average price in the months after it, using windows of 3, 6 and 12 months. For every commodity and state I calculated the naira change and the percentage change. The tables and charts in this report use the 3-month window, and the full results for all three windows are saved in descriptive_results.csv. The number of months used in each average is recorded, and every 3-month average in this report is based on three months of data, so none has missing months.
+3. Findings
+3.1 Prices over time
+Figure 1 shows average prices for each commodity from 2022 to late 2026, with dashed lines marking the two events.
+Prices were fairly stable through 2022 and early 2023. Local rice was the most expensive staple at around 500 naira per kg, while most other commodities sat between about 200 and 300 naira per kg. Prices began to climb around the time of the two events and kept rising for more than a year afterwards, which is much longer than the 3-month windows used for the comparisons below. The peak came in mid-to-late 2024. At that point white beans reached roughly 2,100 naira per kg, local rice about 1,700, maize flour about 1,450 and yam about 1,330, while sorghum and millet topped out near 900.
+Prices then fell back. White beans dropped to around 625 naira per kg by early 2026, and rice, maize flour and yam also eased, though all of them remained well above their 2022 levels. By late 2026 most commodities had risen again, with white beans and rice both near 1,150 to 1,200 naira per kg, while sorghum and millet stayed lower at roughly 400 to 450. The price of yam fell sharply again near the end of the series.
+The series for white beans and maize flour has gaps in 2022 and early 2023, so the early part of those lines should be read with care.
+3.2 Change after the fuel subsidy removal (May 2023)
+Comparing the 3 months after the removal with the 3 months before it, every commodity became more expensive.
+Commodity
+Before (NGN/kg)
+After (NGN/kg)
+Change
+Yam
+270.0
+366.1
++35.6%
+Maize flour
+275.3
+373.1
++35.5%
+Sorghum
+235.7
+314.5
++33.4%
+Millet
+251.3
+323.4
++28.7%
+White beans
+432.8
+542.5
++25.3%
+Local rice
+630.3
+685.8
++8.8%
+Yam and maize flour rose the most, at about 35 to 36 percent. Local rice rose the least, at under 9 percent. By state, prices rose 17.9 percent in Borno (from 385.3 to 454.1 naira per kg) and 32.3 percent in Yobe (from 313.2 to 414.4 naira per kg).
+Figure 2 breaks the change down by state and commodity. Yobe recorded the larger increase for five of the six commodities, and the gaps were widest for white beans (12 percent in Borno against 48 percent in Yobe) and sorghum (19 percent against 54 percent). Yobe's sorghum increase of 54 percent was the largest of any state and commodity pair. Yam was the exception, rising 38 percent in Borno and 33 percent in Yobe. The smallest increases were for local rice, at 7 percent in Borno and 11 percent in Yobe.
+3.3 Change after the naira float (June 2023)
+The 3-month comparison around the float shows larger increases than around the subsidy removal for every commodity.
+Commodity
+Before (NGN/kg)
+After (NGN/kg)
+Change
+Yam
+277.9
+470.4
++69.3%
+Maize flour
+285.0
+451.5
++58.4%
+Sorghum
+255.7
+367.8
++43.9%
+Millet
+267.4
+372.5
++39.3%
+White beans
+458.6
+575.6
++25.5%
+Local rice
+647.6
+725.4
++12.0%
+Yam (+69.3 percent) and maize flour (+58.4 percent) again led the increases, and local rice and white beans again rose the least. By state, prices rose 32.1 percent in Borno (from 396.4 to 523.8 naira per kg) and 38.8 percent in Yobe (from 334.3 to 463.9 naira per kg). The difference between the two states is much smaller here than after the subsidy removal.
+3.4 Which commodities were most and least affected
+The ranking of commodities is nearly the same for both events. Yam and maize flour, followed by sorghum and millet, were hit hardest, while white beans and local rice were the least affected in percentage terms. Local rice may have been more resistant because it started from a much higher price, so a similar naira increase is a smaller percentage. The data here do not show why the ranking looks this way.
+4. Limitations
+• The two events overlap. The subsidy removal and the float are only a month apart, so the "after" window for one event largely covers the "before" window for the other. The two sets of results cannot be cleanly separated, and the larger figures around the float should not be read as proof that the float had a bigger effect. Its baseline already includes the month of the subsidy removal, and its after window captures more of the cumulative rise.
+• The comparison is descriptive, not causal. Many other factors were acting on prices at the same time, including general inflation, seasonal harvest cycles, insecurity and farming conditions in the northeast.
+• Prices are nominal. The figures are in naira and are not adjusted for general inflation, so the percentage changes overstate the real increase in food prices.
+• Short windows miss the full effect. Figure 1 shows prices kept rising for over a year after the events, so a 3-month window only captures the early part of the adjustment. The 6- and 12-month results in descriptive_results.csv give a longer view.
+• Limited coverage. Only two states and six commodities are included, so the findings cannot be generalised to Nigeria as a whole. Some series also have gaps in the early months.
+5. Conclusion
+Food prices in Borno and Yobe rose sharply around the 2023 fuel subsidy removal and naira float. In the 3-month windows, yam, maize flour, sorghum and millet rose the most, while local rice and white beans rose the least. Yobe saw bigger increases than Borno after the subsidy removal, although the gap narrowed after the float. Over the longer period, prices kept climbing into 2024, fell back through 2025, and remained well above pre-2023 levels. Because the two events are so close together, this analysis cannot separate their individual effects, and a method that controls for inflation and other factors would be needed to estimate how much each policy contributed.

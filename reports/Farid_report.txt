@@ -1,0 +1,19 @@
+# Data Cleaning and Preprocessing
+
+The National Bureau of Statistics (NBS) Premium Motor Spirit (PMS) reports were processed using Python to extract monthly national average petrol prices from multiple Excel files. The Pandas and Glob libraries were imported. Pandas was used for reading and manipulating the data, while Glob was used to locate the Excel files in the raw PMS reports folder.
+
+First, an empty list called `rows` was created to store the extracted records. The `glob.glob()` function was used to locate all Excel files in the PMS reports directory. The files were sorted using `sorted()` to ensure they were processed in an orderly manner. Temporary Excel files beginning with `~$` were skipped to avoid reading files created while workbooks were open in Excel.
+
+Each Excel file was loaded using `pd.read_excel()` with `sheet_name=None` to read all worksheets and `header=None` to preserve the original spreadsheet structure.
+
+Next, the code searched through every worksheet to identify the one containing the national state table. It checked the first column for the word "State" using `.astype(str)`, `.str.strip()`, and `.any()`. Once the correct worksheet was found, it was stored in the variable `ws`. Files without a State table were skipped.
+
+The code then extracted the dates from the table header. The three dates represented the same month in the previous year, the previous month, and the current reporting month. The national average row was identified by searching for the word "AVERAGE". The current reporting month was also stored in a variable called `report_month`.
+
+After identifying the dates and average prices, the code used a loop to extract the three monthly price records from each report. Each record contained the month, the national average PMS price, and the month in which the source report was published. The prices were converted to floating-point numbers, while the dates were standardized to monthly timestamps.
+
+Since different reports could contain prices for the same month, duplicate records were removed. The records were first sorted by their reporting month, and `drop_duplicates()` was used with `keep='last'` to retain the most recent report for each month. The resulting dataset was then sorted chronologically and arranged into two columns: `month` and `pms_price`.
+
+Finally, the code checked whether monthly records were available for every month between January 2023 and May 2026. Any missing months were identified and displayed alongside the total number of records. The dataset was also printed for inspection, with October 2023 and October 2024 used as spot checks to verify that the extracted prices were approximately 630.6 and 1184.8 respectively.
+
+The cleaned monthly PMS dataset was then exported as `pms_monthly.csv` into the processed data folder. The exchange-rate dataset, `fx_monthly.csv`, was not processed in this notebook because it had already been prepared separately.

@@ -1,0 +1,7 @@
+We evaluated Linear Regression and Random Forest models on monthly Nigerian food price data (`n_test = 282`),
+comparing performance with and without lagged macroeconomic shock features (`fx_lag1` and `pms_lag1`) against a naive persistence benchmark.
+ Across all experiments, lagged food price (`price_lag1`) was the dominant predictor, accounting for over 90% of Random Forest feature importance.
+ **Linear Regression without shock features** achieved the strongest overall performance ,
+ outperforming the naive baseline on error variance
+ Including macro shock indicators slightly improved Random Forest accuracy  but degraded Linear Regression 
+ likely due to linear over-extrapolation during sharp exchange rate and fuel price shifts. Overall, tree-based models struggled to extrapolate upward price trends compared to linear regression, making regularized linear models or differenced price targets recommended next steps.
